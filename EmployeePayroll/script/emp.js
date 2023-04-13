@@ -5,16 +5,46 @@ const  submitForm=()=>{
 
     const selectImage=$('input[name="Profile"]:checked').val();
     console.log(selectImage);
-    
-     
+
+    const selectGender=$('input[name="gender"]:checked').val();
+    console.log(selectGender);
+
+    const selectDepartment=$('input[name="dept"]:checked').val();
+    console.log(selectDepartment);
+
+    var dept= []
+    $('input[name="dept"]:checked').each(function() {
+       
+       dept.push($(this).val());
+       console.log(dept); 
+     });
+   
+    const selectSalary=$('#salary').val();
+    console.log(selectSalary);
+
+    const selectDay=$('#Day').val();
+    const selectMonth=$('#Month').val();
+    const selectYear=$('#Year').val();
+    console.log("Start Date="+selectDay+selectMonth+selectYear);
+
+    const note=$('#notes').val();
+    console.log(note);
+
     let reqData={
         "name":name,
-        "profile":selectImage
+        "profile":selectImage,
+        "gender":selectGender,
+        "department":dept,
+        "salary": selectSalary,
+        "startDate":selectDay + ' '+selectMonth + ' ' +selectYear,
+        "notes": note
     }
+
+    console.log(reqData);
     
     $.ajax({
         type:'POST',
-        url: "  http://localhost:3000 ",
+        url: "  http://localhost:3000/employees ",
         datatype:'json',
         data: reqData,
 
@@ -29,5 +59,6 @@ const  submitForm=()=>{
     });
 
 
-    console.log("Using jquery",reqData)  ;  
+    
 }
+

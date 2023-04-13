@@ -1,0 +1,17 @@
+{
+  "employees": [
+    {
+      "name": "Rinku",
+      "profile": "../assets/profile-images/Pic-1.png",
+      "gender": "Female",
+      "department[]": [
+        "HR",
+        "Engineer"
+      ],
+      "salary": "35000",
+      "startDate": "6 June 2022",
+      "notes": "Hello",
+      "id": 1
+    }
+  ]
+}

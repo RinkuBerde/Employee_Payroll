@@ -2,17 +2,17 @@
   "employees": [
     {
       "name": "Rinku",
-      "profile": "../assets/profile-images/Pic-1.png",
+      "profileUrl": "../assets/profile-images/Pic-1.png",
       "gender": "Female",
-      "department[]": [
-        "HR",
+      "department": [
+        "Sales",
+        "Finance",
         "Engineer"
       ],
-      "salary": "35000",
-      "startDate": "6 June 2022",
+      "salary": "₹ 40000",
+      "startDate": "9 March 2018",
       "notes": "Hello",
       "id": 1
     }
-    
   ]
 }

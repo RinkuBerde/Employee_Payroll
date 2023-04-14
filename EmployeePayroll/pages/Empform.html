@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="../style/Empform.css">
+    <script src="../script/emp.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style\Empform.css">
-    <script src ="../script\emp.js"></script>
-    <title>Employee Payroll</title>
+    <title>EMPLOYEE PAYROLL</title>
 </head>
+
 <body>
     <header>
         <div class="header-container">
-            <img src="../assets\icons\logo.png" alt="logo">
+            <img src="../assets/icons/logo.png" alt="logo">
             <div class="text">
                 <span class="emp">EMPLOYEE</span>
                 <span>PAYROLL</span>
@@ -21,45 +23,41 @@
     </header>
     <div class="form">
         <div class="title">
-            <h2>Employee Payroll Form </h2>
+            <h4>Employee Payroll Form</h4>
         </div>
         <div class="elements">
             <label for="name" class="label">Name</label>
-            <input type="text" id="name">
+            <input type="text" id="fName">
         </div>
         <div class="elements">
-            <label for="name" id="profile-images" class="label">Profile Image</label>
+            <label for="name" id="profile-img" class="label">Profile Image</label>
             <div class="space">
                 <div class="Image">
                     <input id="pic1" type="radio" name="Profile" value="../assets/profile-images/Pic-1.png">
-                    <img src="../assets/profile-images/Pic-1.png" alt="">
+                    <img src="../assets/profile-images/Pic-1.png">
                 </div>
                 <div class="Image">
                     <input id="pic2" type="radio" name="Profile" value="../assets/profile-images/Pic-2.png">
-                    <img src="../assets/profile-images/Pic-2.png" alt="">
+                    <img src="../assets/profile-images/Pic-2.png">
                 </div>
                 <div class="Image">
                     <input id="pic3" type="radio" name="Profile" value="../assets/profile-images/Pic-3.png">
-                    <img src="../assets/profile-images/Pic-3.png" alt="">
+                    <img src="../assets/profile-images/Pic-3.png">
                 </div>
                 <div class="Image">
                     <input id="pic4" type="radio" name="Profile" value="../assets/profile-images/Pic-4.png">
-                    <img src="../assets/profile-images/Pic-4.png" alt="">
-                </div>
-                <div class="Image">
-                    <input id="pic5" type="radio" name="Profile" value="../assets/profile-images/Pic-5.png">
-                    <img src="../assets/profile-images/Pic-5.png" alt="">
+                    <img src="../assets/profile-images/Pic-4.png">
                 </div>
             </div>
         </div>
         <div class="elements">
             <label for="name" id="gender" class="label">Gender</label>
             <div class="space">
-                <div class="Image">
+                <div class="Radio">
                     <input type="radio" id="male" name="gender" value="Male">
                     <label class="text" for="male">Male</label>
                 </div>
-                <div class="Image">
+                <div class="Radio">
                     <input type="radio" id="female" name="gender" value="Female">
                     <label class="text" for="female">Female</label>
                 </div>
@@ -68,23 +66,23 @@
         <div class="elements">
             <label for="name" id="department" class="label">Department</label>
             <div class="space">
-                <div class="Image">
+                <div class="Checkbox">
                     <input id="hr" type="checkbox" name="dept" value="HR" class="checkbox">
                     <p>HR</p>
                 </div>
-                <div class="Image">
+                <div class="Checkbox">
                     <input id="sales" type="checkbox" name="dept" value="Sales" class="checkbox">
                     <p>Sales</p>
                 </div>
-                <div class="Image">
+                <div class="Checkbox">
                     <input id="finance" type="checkbox" name="dept" value="Finance" class="checkbox">
                     <p>Finance</p>
                 </div>
-                <div class="Image">
+                <div class="Checkbox">
                     <input id="engineer" type="checkbox" name="dept" value="Engineer" class="checkbox">
                     <p>Engineer</p>
                 </div>
-                <div class="Image">
+                <div class="Checkbox">
                     <input id="others" type="checkbox" name="dept" value="Others" class="checkbox">
                     <p>Others</p>
                 </div>
@@ -95,12 +93,12 @@
             <div>
                 <select name="salary" id="salary" class="Salary">
                     <option value="" disabled selected>Select Salary</option>
-                    <option value="25000">25000</option>
-                    <option value="30000">30000</option>
-                    <option value="35000">35000</option>
-                    <option value="40000">40000</option>
-                    <option value="45000">45000</option>
-                    <option value="50000">50000</option>
+                    <option value="₹ 25000">₹ 25000</option>
+                    <option value="₹ 30000">₹ 30000</option>
+                    <option value="₹ 35000">₹ 35000</option>
+                    <option value="₹ 40000">₹ 40000</option>
+                    <option value="₹ 45000">₹ 45000</option>
+                    <option value="₹ 50000">₹ 50000</option>
                 </select>
             </div>
         </div>
@@ -108,7 +106,7 @@
             <label for="range" id="date" class="label">Start Date </label>
             <div class="StartDate">
                 <div>
-                    <select name="Day" id="Day" class="Date">
+                    <select name="Day" id="day" class="Date">
                         <option value="" disabled selected>Day</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -144,7 +142,7 @@
                     </select>
                 </div>
                 <div>
-                    <select name="Month" id="Month" class="Date">
+                    <select name="Month" id="month" class="Date">
                         <option value="" disabled selected>Month</option>
                         <option value="Jan">January</option>
                         <option value="Feb">February</option>
@@ -162,14 +160,17 @@
                 </div>
 
                 <div>
-                    <select name="Year" id="Year" class="Date">
+                    <select name="Year" id="year" class="Date">
                         <option value="" disabled selected>Year</option>
-                        <option value="2022">2023</option>
+                        <option value="2018">2023</option>
                         <option value="2022">2022</option>
                         <option value="2021">2021</option>
                         <option value="2020">2020</option>
                         <option value="2019">2019</option>
-                        <option value="2018">2018</option>
+                        <option value="2018">2017</option>
+                        <option value="2018">2016</option>
+                        <option value="2018">2015</option>
+                        <option value="2018">2014</option>
                     </select>
                 </div>
             </div>
@@ -178,16 +179,15 @@
             <label for="notes" class="label">Notes</label>
             <textarea id="notes" name="notes" rows="4" cols="50"></textarea>
         </div>
-       
-            <div class="elements">
-                <button type="button" class="submit">Cancel</button>
-                <div class="buttons">
-                    <button type="button" class="submit-all" onclick="submitForm()">Submit</button>
-                    <button type="button" class="reset">Reset</button>
-                </div>
+        <div class="elements">
+            <button type="button" class="submit">Cancel</button>
+            <div class="buttons">
+                <button type="button" class="submit" onclick="submitForm()">Submit</button>
+                <button type="button" class="submit">Reset</button>
             </div>
         </div>
     </div>
-    </div>
 </body>
+
 </html>
+

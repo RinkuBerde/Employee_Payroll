@@ -1,65 +1,60 @@
-const  submitForm=()=>{
 
-    const name=$('#name').val()
-    console.log(name);
 
-    const selectImage=$('input[name="Profile"]:checked').val();
-    console.log(selectImage);
+const submitForm = () => {
 
-    const selectGender=$('input[name="gender"]:checked').val();
-    console.log(selectGender);
+    const fullName = $('#fName').val();
+    console.log(fullName);
 
-    const selectDepartment=$('input[name="dept"]:checked').val();
-    console.log(selectDepartment);
+    const profileImage = $('input[type="radio"]:checked').val();
+    console.log(profileImage);
 
-    var dept= []
-    $('input[name="dept"]:checked').each(function() {
-       
-       dept.push($(this).val());
-       console.log(dept); 
-     });
-   
-    const selectSalary=$('#salary').val();
-    console.log(selectSalary);
+    const gender = $('input[name="gender"]:checked').val();
+    console.log(gender);
 
-    const selectDay=$('#Day').val();
-    const selectMonth=$('#Month').val();
-    const selectYear=$('#Year').val();
-    console.log("Start Date="+selectDay+selectMonth+selectYear);
+    var department= []
+        $('input[type="checkbox"]:checked').each(function() {          
+            department.push($(this).val());
+         });
+         console.log(department);
+     
+    const salary = $('#salary').val();
+    console.log(salary);
 
-    const note=$('#notes').val();
-    console.log(note);
+    const day = $('#day').val();
+    const month = $('#month').val();
+    const year = $('#year').val();
+    console.log(day + '-' + month + '-' + year);
 
-    let reqData={
-        "name":name,
-        "profile":selectImage,
-        "gender":selectGender,
-        "department":dept,
-        "salary": selectSalary,
-        "startDate":selectDay + ' '+selectMonth + ' ' +selectYear,
-        "notes": note
+    const notes = $('#notes').val();
+    console.log(notes);
+
+    let reqData = {
+        "name": fullName,
+        "profileUrl": profileImage,
+        "gender": gender,
+        "department": department,
+        "salary": salary,
+        "startDate": day + ' ' + month + ' ' + year,
+        "notes": notes,
     }
 
-    console.log(reqData);
-    
     $.ajax({
-        type:'POST',
-        url: "  http://localhost:3000/employees ",
-        datatype:'json',
-        data: reqData,
-
+        url: 'http://localhost:3000/employees',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(reqData),
         success: function(data){
-            console.log("data added succfully",data);
-            alert('data added succfully');
-        },
-        error: function (error){
-            console.log(error);
+                        console.log("succfully  data added",data);
+                        alert('succfully  data added ');
+                    },
+        error: function (xhr, textStatus, errorThrown) {
+            console.log('failed');
         }
+    })
 
-    });
+   // setTimeout(() => {
+        window.location.href="/EmployeePayroll/pages/Dashboard.html";
+   // },2000);
 
-
-    
+  
 }
-
-

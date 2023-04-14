@@ -1,49 +1,60 @@
 <!DOCTYPE html>
-<html lan="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <link rel="stylesheet" href="../style\Dashboard.css">
-        <script src="../script/Dashboard.js"></script>
-        <title>Employee Payroll Dashboard</title>
-    </head>
+<html lang="en">
 
-    <body>
-        <header>
-            <div class="header-container">
-                <img src="../assets\icons\logo.png" alt="logo">
-                <div class="text">
-                    <span class="emp">EMPLOYEE</span>
-                    <span>PAYROLL</span>
-                </div>
-            </div>
-        </header>
-        <div class="main-content">
-            <div class="header-content sub-main-content">
-                <div class="emp-details-text">
-                    Employee Details
-                </div>
-                <div onclick="location.href='./Empform.html'" class="add-button">
-                    <div class="plus-icon">
-                        <img src="../assets/icons/add-24px.svg" alt="Add user logo">
-                    </div>
-                    <div>Add User</div>
-                </div>
-            </div>
-            <div class="table-main">
-                <table id="display" class="table">
-                    <tr class="head">
-                        <th>NAME</th>
-                        <th>GENDER</th>
-                        <th>DEPARTMENT</th>
-                        <th>SALARY</th>
-                        <th>START DATE</th>
-                        <th>ACTIONS</th>
-                    </tr>
-                </table>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/Dashboard.css">
+    <script src="../script/Dashboard.js"></script>
+    <title>DASHBOARD</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="../assets/icons/logo.png" alt="logo" class="logo">
+            <div class="text">
+                <span class="emp">EMPLOYEE</span>
+                <span>PAYROLL</span>
             </div>
         </div>
-    </body>
+    </header>
+    <div class="main-content">
+        <div class="header-content sub-main-content">
+            <div class="emp-details-text">
+                Employee Details
+            </div>
+            <div class="btn">
+                    <button class="searchbtn">
+                        <img src="../assets/icons/search.svg" alt="search">
+                    </button>
+                    <button class="addbtn" onclick="submitForm()">
+                        <img src="../assets/icons/add-24px.svg" alt="add employee" onclick="submitForm()">
+                        Add User
+                    </button>
+            </div>
+        </div>
+        <div class="table-main">
+            <table id="display" class="table">
+                <tr class="head">
+                    <th class="profileimgcol"></th>
+                    <th class="namecol">NAME</th>
+                    <th class="gendercol">GENDER</th>
+                    <th class="deptcol">DEPARTMENT</th>
+                    <th class="salarycol">SALARY</th>
+                    <th class="datecol">START DATE</th>
+                    <th class="actionscol">ACTIONS</th>
+                </tr>
+                <div class="table-body">
+                    <tbody class="tblbody">
+                        
+                    </tbody>
+                </div>
+            </table>
+        </div>
+    </div>
+</body>
+
 </html>

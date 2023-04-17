@@ -5,14 +5,25 @@
       "profileUrl": "../assets/profile-images/Pic-1.png",
       "gender": "Female",
       "department": [
-        "Sales",
-        "Finance",
-        "Engineer"
+        "Engineer",
+        "Others"
       ],
-      "salary": "₹ 40000",
-      "startDate": "9 March 2018",
-      "notes": "Hello",
+      "salary": "₹ 35000",
+      "startDate": "16 Oct 2021",
+      "notes": "Heyyyyyy",
       "id": 1
+    },
+    {
+      "name": "",
+      "profileUrl": "../assets/profile-images/Pic-1.png",
+      "gender": "Female",
+      "department": [
+        "Finance"
+      ],
+      "salary": null,
+      "startDate": "null null null",
+      "notes": "",
+      "id": 2
     }
   ]
 }

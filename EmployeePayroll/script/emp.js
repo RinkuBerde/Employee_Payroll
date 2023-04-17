@@ -16,7 +16,7 @@ const submitForm = () => {
             department.push($(this).val());
          });
          console.log(department);
-     
+                    
     const salary = $('#salary').val();
     console.log(salary);
 
@@ -58,3 +58,6 @@ const submitForm = () => {
 
   
 }
+const cancel = () => {
+    window.location.href = "/EmployeePayroll/pages/Dashboard.html";
+  }

@@ -7,14 +7,20 @@
   gap: 5px;
 }
 
+
+
 header {
   background-color: #ffffff;
+  
 }
 
 .text {
   display: flex;
   flex-direction: column;
   color: #42515F;
+  
+  
+  
 }
 
 .emp {

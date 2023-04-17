@@ -23,7 +23,7 @@ $(document).ready(function () {
 
                 tblrow.append("<td class='salarycol'>" + value.salary + "</td>");
                 tblrow.append("<td class='datecol'>" + value.startDate + "</td>");
-                tblrow.append("<td class='actionscol action'><img src='../assets/icons/delete-black-18dp.svg' alt='Delete' id='deletebtn' onClick='deleteEmployees(" + value.id + ")'><img src='../assets/icons/create-black-18dp.svg' alt='Edit' id='editbtn' onClick='editEmployeeDetails(" + value.id + ")'></td>");
+                tblrow.append("<td class='actionscol action'><img src='../assets/icons/delete-black-18dp.svg' alt='Delete' id='deletebtn' onClick='deleteEmployees(" + value.id + ")'><img src='../assets/icons/create-black-18dp.svg' alt='Edit' id='editbtn' onClick='update(" + value.id + ")'></td>");
 
                 tblbody.append(tblrow);
             });
@@ -51,5 +51,9 @@ const submitForm = () => {
     window.location.href="/EmployeePayroll/pages/Empform.html";
 }
 
+function update(id){
+    localStorage.setItem('empId', id);
+    window.location.href="/EmployeePayroll/pages/UpdateEmpForm.html";
+}
 
 
